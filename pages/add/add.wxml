@@ -1,0 +1,27 @@
+<view class='page'>
+  <view class='page-t'>
+    <textarea placeholder="计划做点什么事情？" value='{{content}}'  bindinput='changeHandle' class='textareaInput' auto-focus />
+
+    <picker mode="date" value="{{startDate}}"  bindchange="bindStartDateChange">
+        <text class='dateTxt'> 开始时间： {{startDate}}</text>
+    </picker>  
+
+    <picker mode="time" value="{{startTime}}" bindchange="bindStartTimeChange">
+        <text class='timeTxt'>{{startTime}}</text>
+    </picker> 
+
+
+    <picker mode="date" value="{{endDate}}"  bindchange="bindEndDateChange">
+        <text class='dateTxt'> 结束时间： {{endDate}}</text>
+    </picker>  
+
+    <picker mode="time" value="{{endTime}}" bindchange="bindEndTimeChange">
+        <text class='timeTxt'>{{endTime}}</text>
+    </picker>
+            
+  </view>
+  <view class='btns'>
+    <view class='cancel' bindtap='cancelHandle'>取消</view>
+    <view class='sure' bindtap='sureHandle'>{{sureText}}</view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/list/list",
+    "pages/add/add"
+    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#656e7f",
+    "navigationBarTitleText": "备忘盒子",
+    "navigationBarTextStyle":"#fff",
+    "navigationBarTextSize":"30px",
+    "enablePullDownRefresh": false
+  }
+}

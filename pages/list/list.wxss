@@ -1,0 +1,151 @@
+.page{
+  position: relative;
+  overflow: hidden
+}
+.header{
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  color: #ae9e84;
+}
+.header::after{
+  content:'MEMORANDUM BOX';
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  color: rgba(225,225,225,0.8);
+  font-size:60rpx;
+  left: 0;
+  top:30px;
+}
+.userinfo-avatar {  
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-filter: blur(10px);
+  filter: blur(10px); 
+}
+.whiteBG{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background:rgba(225,225,225,0.8);
+}
+.userinfo-nickname {
+  color: #a38e6d;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  left: 0px;
+  top:10px;
+}
+.lists{
+  width: 100%;
+  height: calc(100% - 80px);
+  position: absolute;
+  z-index: 3;
+  left: 0px;
+  top:70px;
+}
+.list-i{
+  width: 100%;
+  transition: .3s;
+  margin-bottom:20rpx;
+  display: flex;
+  flex-direction:column;
+  
+}
+.content{
+  border-bottom: 1px solid #ccc;
+  line-height: 60rpx;
+  padding:5px 20rpx;
+  font-weight: bold;
+  width: 100%;
+  box-sizing:border-box;
+  position: relative;
+}
+.conTxt{
+  width: 83%;
+  float: left;
+  word-wrap: break-word;
+}
+.time{
+  color: #2A2BFF;
+  padding: 0 20rpx;
+  line-height: 45rpx;
+  color: #999;
+  font-size: 3vw;
+}
+.startTimeTxt{
+  display: block;
+  width:48%;
+  float: left;
+  text-align: center;
+}
+.endTimeTxt::after{
+  content: '~';
+  display: block;
+  float: left;
+  width: 4%;
+  text-align: center;
+}
+.endTimeTxt{
+  display: block;
+  width:48%;
+  float: left;
+  text-align: center;
+}
+.doneBtn,.removeBtn{
+  float: right;
+  opacity: .8;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+}
+.removeBtn{
+  right: 10px;
+}
+
+
+.addbtn{
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  z-index: 5;
+  right:50rpx;
+  bottom: 50rpx;
+  border: 1px solid #656e7f;
+  border-radius: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 32rpx;
+  background: rgba(225,225,225,0.9);
+}
+.done{
+  color: #999;
+  background: rgba(230,241,248,0.3);
+}
+.undone{
+  color: #333;
+  background: rgba(230,241,248,0.5);
+}
+.addbtn image{
+  width:60%;
+  height: 60%;
+}

@@ -1,0 +1,27 @@
+<view class="page" bindtouchmove='eleTouchHandle'>
+  <view  bindtap="bindViewTap" class="header">    
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" background-position="center"></image> 
+    <view class='whiteBG'></view>
+    <text class="userinfo-nickname">欢迎 {{userInfo.nickName}} 使用</text>
+  </view>
+  
+  <scroll-view scroll-y='true' class="lists scroll">
+    <block wx:for="{{lists}}" wx:key='{{index}}'>
+      <view class="list-i {{item.doneState == 0 ? 'done' : 'undone'}}" data-index="{{index}}">
+        <view class="content">
+          <view class='conTxt' data-id="{{item.id}}" bindtap="editHandle">{{item.content}}</view>
+          <icon type='cancel' class='removeBtn' color="{{item.doneState == 0 ? '#999' : ''}}" bindtap='removeHandle' data-id="{{item.id}}"></icon>
+          <icon type='success' class='doneBtn' wx:if="{{item.doneState!=0}}" bindtap="updateDoneState"  data-id="{{item.id}}"></icon>
+          
+        </view>  
+        <view class="time">
+          <text class='startTimeTxt'>{{item.startDate}} / {{item.startTime}}</text>
+          <text class='endTimeTxt'>{{item.endDate}} / {{item.endTime}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="addbtn" bindtouchstart="addHandle">
+    <image src='../../img/add_icon.png' />
+  </view>
+</view>
